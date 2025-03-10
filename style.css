@@ -345,6 +345,27 @@ body {
   color: var(--text-secondary);
   font-size: 1.125rem;
 }
+.stat-item1 {
+  position: relative;
+}
+
+.stat-item1::before,
+.stat-item1::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #e0e0e0;
+}
+
+.stat-item1::before {
+  left: -15px;
+}
+
+.stat-item1::after {
+  right: -15px;
+}
 
 .logos-section {
   padding: 70px;
@@ -964,6 +985,11 @@ h2 {
 }
 
 @media (max-width: 768px) {
+
+  .stat-item1::before,
+  .stat-item1::after {
+      display: none;
+  }
 
   .logo-img {
     width: 120px;
